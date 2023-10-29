@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-
+  div.container-fluid
+    div.row
+      - const results = [{itemName: "porter", itemType: "book", itemPrice: 17.99}, {itemName: "pulsar", itemType: "bike", itemPrice: 9.99}, {itemName: "DSLR", itemType: "camera", itemPrice: 12.49}]
+        each item in results
+          div.col-sm-2
+             p Item Name: #{item.itemName}
+             p Type: #{item.itemType}
+             p Price: $#{item.itemPrice.toFixed(2)}
