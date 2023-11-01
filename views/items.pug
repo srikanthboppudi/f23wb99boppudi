@@ -2,9 +2,9 @@ extends layout
 
 block content
   h1= title
+  - const results = [{itemName: "porter", itemCategory: "book", itemPrice: 17.99}, {itemName: "pulsar", itemCategory: "bike", itemPrice: 9.99}, {itemName: "DSLR", itemCategory: "camera", itemPrice: 12.49}]
   div.container-fluid
     div.row
-      - const results = [{itemName: "porter", itemCategory: "book", itemPrice: 17.99}, {itemName: "pulsar", itemCategory: "bike", itemPrice: 9.99}, {itemName: "DSLR", itemCategory: "camera", itemPrice: 12.49}]
         each item in results
           div.col-sm-2
              p Item Name: #{item.itemName}
