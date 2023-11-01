@@ -2,6 +2,7 @@ extends layout
 
 block content
   h1= title
+  p Query Parameters: Rows is #{query.rows}, Cols is #{query.cols}
   - let rows = Number(query.rows)
   - let cols = Number(query.cols)
   - if (!Number.isInteger(rows) || !Number.isInteger(cols))
